@@ -12,4 +12,6 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView *separatorImgView;
 
+@property (strong, nonatomic) IBOutlet UILabel *roundNameLbl;
+
 @end

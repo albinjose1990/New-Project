@@ -42,6 +42,7 @@
             <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <size key="customSize" width="150" height="50"/>
             <connections>
+                <outlet property="roundNameLbl" destination="14E-bK-YPu" id="zsK-ri-ZVk"/>
                 <outlet property="separatorImgView" destination="TAo-9i-idf" id="cfZ-g7-4CD"/>
             </connections>
             <point key="canvasLocation" x="84" y="68"/>

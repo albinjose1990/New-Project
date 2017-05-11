@@ -142,6 +142,7 @@
         [cell setBackgroundColor:[UIColor lightGrayColor]];
     }
     
+    [cell.roundNameLbl setText:[NSString stringWithFormat:@"Round %ld",(long)indexPath.row]];
     
     return cell;
 }
