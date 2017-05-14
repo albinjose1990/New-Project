@@ -9,7 +9,7 @@
 #import "PhotoViewController.h"
 #import "PhotoView.h"
 #import "constants.h"
-
+#import "AppDelegate.h"
 @interface PhotoViewController ()
 {
     CGRect topContainerFrame;
@@ -96,6 +96,9 @@
 }
 - (void)PhotoSelected:(int)index
 {
+    
+    [[AppDelegate sharedAppDelegate] startActivityIndicator];
+    
     _slideImageViewController = [PEARImageSlideViewController new];
     
     NSArray *imageLists = @[
@@ -111,6 +114,8 @@
         [_slideImageViewController setImageLists:imageLists];
     
         [_slideImageViewController showAtIndex:index];
+    
+        [[AppDelegate sharedAppDelegate] stopActivityIndicator];
 
        
 }

@@ -7,6 +7,7 @@
 //
 
 #import "TopbarView.h"
+#import "AppDelegate.h"
 
 @implementation TopbarView
 {
@@ -29,5 +30,11 @@
 - (void)setHeaderTitle:(NSString *)title
 {
     [self.navTitle setText:title];
+}
+
+-(void)backBtn:(UIButton *)sender
+{
+    
+    [[AppDelegate sharedAppDelegate] popToViewController];
 }
 @end

@@ -10,6 +10,7 @@
 #import "ResultTopCollectionViewCell.h"
 #import "constants.h"
 #import "AppDelegate.h"
+#import "TopbarView.h"
 @interface ResultViewController ()
 
 {
@@ -25,6 +26,8 @@
     [super viewDidLoad];
     
     [self setCardDesign];
+    
+    [self.topBarView setParent:[AppDelegate sharedAppDelegate]];
     
     [self.collectionView registerNib:[UINib nibWithNibName:@"ResultTopCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"resultCollectionViewCell"];
     

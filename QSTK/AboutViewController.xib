@@ -27,10 +27,10 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8AE-oP-AFA">
-                            <rect key="frame" x="89" y="25" width="197" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="About" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8AE-oP-AFA">
+                            <rect key="frame" x="0.0" y="25" width="375" height="21"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -78,11 +78,11 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kJa-rx-X35">
                             <rect key="frame" x="8" y="31" width="327" height="470"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <mutableString key="text">Qatar SuperStock 600 (QSTK600) is a new road racing championship organized by Qatar Motor Motorcycle Federation and Losail Circuit Sports Club. The QSTK600 Championship will consist of 12 races over 6 rounds held at the Losail International Circuit.
+                            <string key="text">Qatar SuperStock 600 (QSTK600) is a new road racing championship organized by Qatar Motor Motorcycle Federation and Losail Circuit Sports Club. The QSTK600 Championship will consist of 12 races over 6 rounds held at the Losail International Circuit.
 
 All riders will compete with the best of their racing skills using one-make bike that will be used for the rest of the season, a stocked 600cc bike , so it is a great chance for every competitor to test themselves and fight for the title in a fair racing conditions and in a profesional environment. The entry fee to take part in the championship includes the use of the bike during the championship and the professional assistance to keep the bikes ready for racing conditions.
 
-The objective of this championship is to organize a championship that is fair, affordable and can give to all riders in the region the opportunity to race without worrying about all the logistics of bringing their bikes to Qatar and just be focused on racing and enjoying the event.</mutableString>
+The objective of this championship is to organize a championship that is fair, affordable and can give to all riders in the region the opportunity to race without worrying about all the logistics of bringing their bikes to Qatar and just be focused on racing and enjoying the event.</string>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>

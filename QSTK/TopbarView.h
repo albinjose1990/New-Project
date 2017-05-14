@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Protocol.h"
+@class AppDelegate;
 @interface TopbarView : UIView
 
 @property (weak, nonatomic) id <cellpass>navdelegate;
@@ -17,5 +18,9 @@
 - (void)setHeaderTitle:(NSString *)title;
 
 @property (weak, nonatomic) IBOutlet UILabel *navTitle;
+
+@property (nonatomic, assign) AppDelegate *parent;
+
+- (IBAction)backBtn:(UIButton *)sender;
 
 @end

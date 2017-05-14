@@ -20,6 +20,8 @@
 #import "RoundsViewController.h"
 #import "MediaViewController.h"
 #import "PhotoViewController.h"
+#import "SponsorsViewController.h"
+#import "InitialLoaderViewController.h"
 #define kActivityViewTag        1000
 #define kActivityIndicatorTag   1001
 
@@ -59,8 +61,12 @@
     self.mediaView = [[MediaViewController alloc] initWithNibName:@"MediaViewController" bundle:[NSBundle mainBundle]];
     
     self.photoView = [[PhotoViewController alloc] initWithNibName:@"PhotoViewController" bundle:[NSBundle mainBundle]];
+    
+     self.sponsorView = [[SponsorsViewController alloc] initWithNibName:@"SponsorsViewController" bundle:[NSBundle mainBundle]];
+    
+     self.initialLoaderView = [[InitialLoaderViewController alloc] initWithNibName:@"InitialLoaderViewController" bundle:[NSBundle mainBundle]];
 
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:self.initialView];
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:self.initialLoaderView];
     
     [self.navigationController setNavigationBarHidden:YES];
     
@@ -182,6 +188,14 @@
     
     
 }
+
+
+-(void)popToViewController
+{
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 
 #pragma mark Activity Indicator
 

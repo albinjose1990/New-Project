@@ -18,11 +18,16 @@
 
 @implementation InitialViewController
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self createVideoPlayer];
-    // Do any additional setup after loading the view from its nib.
+    
 }
 
 -(void)createVideoPlayer
@@ -34,10 +39,10 @@
     
     self.avPlayer = [AVPlayer playerWithURL:fileURL];
     
-//    self.avPlayer.actionAtItemEnd = AVPlayerActionAtItemEndNone;
-//    
-//    self.avPlayer.actionAtItemEnd = AVPlayerActionAtItemEndNone;
-//    
+    self.avPlayer.actionAtItemEnd = AVPlayerActionAtItemEndNone;
+    
+    self.avPlayer.actionAtItemEnd = AVPlayerActionAtItemEndNone;
+//
     
     // [self.avPlayer.currentItem addObserver:self forKeyPath:AVPlayerItemDidPlayToEndTimeNotification options:NSKeyValueObservingOptionNew context:nil];
     
@@ -74,6 +79,18 @@
     
     
 }
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:YES];
+    
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:[self.avPlayer currentItem]];
+    
+    [self.avPlayer pause];
+}
+
+
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {

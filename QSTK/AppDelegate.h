@@ -17,6 +17,8 @@
 @class RoundsViewController;
 @class MediaViewController;
 @class PhotoViewController;
+@class SponsorsViewController;
+@class InitialLoaderViewController;
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
@@ -35,6 +37,10 @@
 
 @property (strong, nonatomic) PhotoViewController *photoView;
 
+@property (strong, nonatomic) SponsorsViewController *sponsorView;
+
+@property (strong, nonatomic) InitialLoaderViewController *initialLoaderView;
+
 @property (strong, nonatomic) UINavigationController *navigationController;
 
 @property (strong, nonatomic) UIView *ativityView;
@@ -50,6 +56,8 @@
 - (void)startActivityIndicator;
 
 - (void)stopActivityIndicator;
+
+-(void)popToViewController;
 
 
 @end
