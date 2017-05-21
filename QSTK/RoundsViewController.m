@@ -24,6 +24,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.dateArray = [[NSMutableArray alloc] initWithObjects:@"20",@"03",@"23",@"07",@"05",@"19", nil];
+    
+    self.monthArray = [[NSMutableArray alloc] initWithObjects:@"JAN",@"FEB",@"MAR",@"APR",@"MAY",@"MAY", nil];
+    
+    self.timeArray = [[NSMutableArray alloc] initWithObjects:@"18.00",@"18.00",@"18.00",@"18.00",@"18.00",@"19.00", nil];
+    
     [self setPersentLoader];
     
     [self setUI];
@@ -263,7 +269,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section
 {
-    return 10;
+    return 5;
     
 }
 
@@ -288,8 +294,9 @@
         //[cell setBackgroundColor:[UIColor lightGrayColor]];
     }
     
-    cell.roundNameLbl.text = [NSString stringWithFormat:@"Round %ld",(long)indexPath.row];
+    cell.roundNameLbl.text = [NSString stringWithFormat:@"Round %ld",(long)indexPath.row+1];
     
+    [self upDateData];
     
     return cell;
 }
@@ -310,6 +317,7 @@
     else
     {
         selectedCategory=indexPath;
+        
         [self swipeTabletoRight];
         
     }
@@ -318,6 +326,7 @@
     [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
     
     
+    [self upDateData];
     //[self callWebservice];
     
     
@@ -374,6 +383,20 @@
     [self.collectionView scrollToItemAtIndexPath:selectedCategory atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
     
     [self.collectionView reloadData];
+    
+}
+
+-(void)upDateData
+{
+    
+    self.roundNoLbl.text = [NSString stringWithFormat:@"Round %ld",(long)selectedCategory.row+1];
+    
+    self.dateLbl.text = [NSString stringWithFormat:@"%@",[self.dateArray objectAtIndex:selectedCategory.row]];
+    
+    self.monthLbl.text = [NSString stringWithFormat:@"%@", [self.monthArray objectAtIndex:selectedCategory.row]];
+    
+    self.timeLbl.text = [NSString stringWithFormat:@"%@", [self.timeArray objectAtIndex:selectedCategory.row]];
+    
     
 }
 

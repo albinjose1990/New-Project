@@ -25,6 +25,8 @@
     NSString *urlArg,*follow,*type;
     
     NSData *pngData;
+    
+    UIWebView *videoView;
 }
 
 @end
@@ -102,6 +104,31 @@
 
    
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",[self.videoUrlArray objectAtIndex:index]]] options:@{} completionHandler:nil];
+    
+    
+//    NSString *videoURL = @"http://youtu.be/Wq_CtkKrt1o";
+//    
+//    videoView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 768, 1024)];
+//    videoView.backgroundColor = [UIColor clearColor];
+//    videoView.opaque = NO;
+//    videoView.delegate = self;
+//    [self.view addSubview:videoView];
+//    
+//    
+//    NSString *videoHTML = [NSString stringWithFormat:@"\
+//                           <html>\
+//                           <head>\
+//                           <style type=\"text/css\">\
+//                           iframe {position:absolute; top:50%%; margin-top:-130px;}\
+//                           body {background-color:#000; margin:0;}\
+//                           </style>\
+//                           </head>\
+//                           <body>\
+//                           <iframe width=\"100%%\" height=\"240px\" src=\"%@\" frameborder=\"0\" allowfullscreen></iframe>\
+//                           </body>\
+//                           </html>", videoURL];
+//    
+//    [videoView loadHTMLString:videoHTML baseURL:nil];
    
     
 }

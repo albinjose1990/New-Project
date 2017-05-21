@@ -5,7 +5,7 @@
 //  Created by Amr on 5/9/17.
 //  Copyright © 2017 Amr. All rights reserved.
 
-////check.........
+////testinggg
 //
 
 #import "AppDelegate.h"
@@ -66,7 +66,7 @@
     
      self.initialLoaderView = [[InitialLoaderViewController alloc] initWithNibName:@"InitialLoaderViewController" bundle:[NSBundle mainBundle]];
 
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:self.initialLoaderView];
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:self.initialView];
     
     [self.navigationController setNavigationBarHidden:YES];
     

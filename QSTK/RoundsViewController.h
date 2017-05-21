@@ -28,6 +28,24 @@
 
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 
+@property (strong, nonatomic) IBOutlet UILabel *dateLbl;
+
+@property (strong, nonatomic) IBOutlet UILabel *monthLbl;
+
+@property (strong, nonatomic) IBOutlet UILabel *roundNoLbl;
+
+@property (strong, nonatomic) IBOutlet UILabel *detailsLbl;
+
+@property (strong, nonatomic) IBOutlet UILabel *timeLbl;
+
+@property (strong, nonatomic) NSMutableArray *dateArray;
+
+@property (strong, nonatomic) NSMutableArray *monthArray;
+
+@property (strong, nonatomic) NSMutableArray *detailsArray;
+
+@property (strong, nonatomic) NSMutableArray *timeArray;
+
 -(IBAction)ButtonActions:(id)sender;
 
 

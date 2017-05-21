@@ -24,9 +24,13 @@
 
 @property (nonatomic, weak) IBOutlet TopbarView *topBarView;
 
+@property (strong, nonatomic) IBOutlet UIWebView *webView;
+
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 -(IBAction)ButtonActions:(id)sender;
 
+@property (strong, nonatomic) IBOutlet UIButton *downloadBtn;
 
-
+@property (strong, nonatomic) NSMutableArray *roundDetailsArray;
 @end

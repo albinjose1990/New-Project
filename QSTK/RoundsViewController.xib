@@ -14,8 +14,13 @@
                 <outlet property="backBtn" destination="FCf-rF-6id" id="bQp-F4-DYd"/>
                 <outlet property="collectionView" destination="XOV-od-l23" id="7FB-lz-rM1"/>
                 <outlet property="dateConatinerView" destination="K9F-j9-ljk" id="0P9-lE-UHT"/>
+                <outlet property="dateLbl" destination="BNe-KR-BtS" id="ArZ-xw-14a"/>
+                <outlet property="detailsLbl" destination="RWQ-Mi-4ui" id="tJn-2S-gBY"/>
                 <outlet property="mapView" destination="eZq-pz-3IP" id="Ldh-AB-g9h"/>
+                <outlet property="monthLbl" destination="4n5-LC-mkW" id="XIF-kY-FdI"/>
+                <outlet property="roundNoLbl" destination="olH-ct-d3A" id="DoD-kn-xj4"/>
                 <outlet property="scrollView" destination="F2X-cd-g1Y" id="y9b-Cc-g0a"/>
+                <outlet property="timeLbl" destination="zfW-Ii-qGo" id="sJU-qw-Y2Z"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

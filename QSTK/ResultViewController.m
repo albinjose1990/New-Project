@@ -11,6 +11,7 @@
 #import "constants.h"
 #import "AppDelegate.h"
 #import "TopbarView.h"
+#import "Common.h"
 @interface ResultViewController ()
 
 {
@@ -24,6 +25,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.roundDetailsArray = [[NSMutableArray alloc] initWithObjects:@"Jan 20/21 - '17'",@"Feb 3/4 - '17'",@"Mar 23/24/25 - '17'",@"Apr 7/8 - '17'",@"May 5/6 - '17'",@"May 19/20 - '17'", nil];
+    
+    [self.downLoaderView setAlpha:0];
+    
+    NSURL* url = [NSURL URLWithString:@"http://www.qatarsuperstock600.com/images/pdf/Official-Practice---16--17-December-2016.pdf"];
+   
+    NSURLRequest* request = [NSURLRequest requestWithURL:url];
+   
+    [_webView loadRequest:request];
+    
     
     [self setCardDesign];
     
@@ -85,13 +97,88 @@
 
 -(void)ButtonActions:(id)sender
 {
-    [self.navigationController popViewControllerAnimated:YES];
+    if (sender == self.backBtn)
+    {
+         [self.navigationController popViewControllerAnimated:YES];
+    }
+    
+    else if (sender == self.downloadBtn)
+    {
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+           
+            NSLog(@"Downloading Started");
+            
+            NSString *urlToDownload = @"http://www.qatarsuperstock600.com/images/pdf/Official-Practice---16--17-December-2016.pdf";
+            
+            NSURL  *url = [NSURL URLWithString:urlToDownload];
+            
+            NSData *urlData = [NSData dataWithContentsOfURL:url];
+            if ( urlData )
+            {
+                NSArray       *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+                NSString  *documentsDirectory = [paths objectAtIndex:0];
+                
+                NSString  *filePath = [NSString stringWithFormat:@"%@/%@", documentsDirectory,@"filename.pdf"];
+                
+                //saving is done on main thread
+                dispatch_async(dispatch_get_main_queue(), ^{
+                   
+                    [urlData writeToFile:filePath atomically:YES];
+                    
+                    NSLog(@"File Saved !");
+                });
+            }
+            
+        });
+        
+        
+        
+    }
+   
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - WebView Delegates
+
+
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+    
+    [self.activityIndicator startAnimating];
+    
+    [self.cardView setUserInteractionEnabled:NO];
+    
+    
+    
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    //[[AppDelegate sharedAppDelegate]stopActivityIndicator];
+    
+    [self.activityIndicator stopAnimating];
+    
+    [self.downLoaderView setAlpha:1];
+    
+    [self.cardView setUserInteractionEnabled:YES];
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(nullable NSError *)error
+{
+    [self.activityIndicator stopAnimating];
+    
+    [self.cardView setUserInteractionEnabled:YES];
+    
+    [[Common sharedCommonManager] alertTitle:@"QSTK" message:@"Please try after Sometime!!!!" delegate:self];
+   
+    
+}
+
 
 #pragma mark -
 #pragma mark UICollectionView
@@ -122,7 +209,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section
 {
-    return 10;
+    return 5;
     
 }
 
@@ -145,7 +232,9 @@
         [cell setBackgroundColor:[UIColor lightGrayColor]];
     }
     
-    [cell.roundNameLbl setText:[NSString stringWithFormat:@"Round %ld",(long)indexPath.row]];
+    [cell.roundNameLbl setText:[NSString stringWithFormat:@"Round %ld",(long)indexPath.row+1]];
+    
+    [cell.roundDetailsLbl setText:[NSString stringWithFormat:@"%@",[self.roundDetailsArray objectAtIndex:indexPath.row]]];
     
     return cell;
 }

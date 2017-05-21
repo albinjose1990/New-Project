@@ -89,6 +89,10 @@
 		C55E607C1EC87EC10063C5B4 /* dotted.png in Resources */ = {isa = PBXBuildFile; fileRef = C55E607B1EC87EC10063C5B4 /* dotted.png */; };
 		C55E607D1EC87EC10063C5B4 /* dotted.png in Resources */ = {isa = PBXBuildFile; fileRef = C55E607B1EC87EC10063C5B4 /* dotted.png */; };
 		C55E607E1EC87EC10063C5B4 /* dotted.png in Resources */ = {isa = PBXBuildFile; fileRef = C55E607B1EC87EC10063C5B4 /* dotted.png */; };
+		C5647D211ED1997D00D49FA4 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5647D201ED1997D00D49FA4 /* Photos.framework */; };
+		C5647D2C1ED1C5A200D49FA4 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = C5647D2B1ED1C5A200D49FA4 /* Common.m */; };
+		C5647D2D1ED1C5A200D49FA4 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = C5647D2B1ED1C5A200D49FA4 /* Common.m */; };
+		C5647D2E1ED1C5A200D49FA4 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = C5647D2B1ED1C5A200D49FA4 /* Common.m */; };
 		C57B7BE71EC1988A0043562C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C57B7BE61EC1988A0043562C /* main.m */; };
 		C57B7BEA1EC1988A0043562C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C57B7BE91EC1988A0043562C /* AppDelegate.m */; };
 		C57B7BF01EC1988A0043562C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C57B7BEE1EC1988A0043562C /* Main.storyboard */; };
@@ -512,10 +516,13 @@
 		C55E60761EC864760063C5B4 /* KKProgressTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKProgressTimer.h; sourceTree = "<group>"; };
 		C55E60771EC864760063C5B4 /* KKProgressTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKProgressTimer.m; sourceTree = "<group>"; };
 		C55E607B1EC87EC10063C5B4 /* dotted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dotted.png; sourceTree = "<group>"; };
+		C5647D201ED1997D00D49FA4 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		C5647D2A1ED1C5A200D49FA4 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		C5647D2B1ED1C5A200D49FA4 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
 		C57B7BE21EC1988A0043562C /* QSTK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QSTK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C57B7BE61EC1988A0043562C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C57B7BE81EC1988A0043562C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		C57B7BE91EC1988A0043562C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C57B7BE91EC1988A0043562C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; };
 		C57B7BEF1EC1988A0043562C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C57B7BF21EC1988A0043562C /* QSTK.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QSTK.xcdatamodel; sourceTree = "<group>"; };
 		C57B7BF41EC1988A0043562C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -726,6 +733,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5647D211ED1997D00D49FA4 /* Photos.framework in Frameworks */,
 				C53003A01EC476F50036A343 /* CoreGraphics.framework in Frameworks */,
 				C59454411EC439270072AE41 /* MapKit.framework in Frameworks */,
 			);
@@ -1099,6 +1107,7 @@
 		C594543F1EC439260072AE41 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C5647D201ED1997D00D49FA4 /* Photos.framework */,
 				C530039F1EC476F50036A343 /* CoreGraphics.framework */,
 				C59454401EC439270072AE41 /* MapKit.framework */,
 			);
@@ -1119,6 +1128,8 @@
 		C5F22A5B1EC1ACC8009C976D /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				C5647D2A1ED1C5A200D49FA4 /* Common.h */,
+				C5647D2B1ED1C5A200D49FA4 /* Common.m */,
 				C57B7C2D1EC19F9D0043562C /* Protocol.h */,
 				C57B7C2E1EC1A1080043562C /* constants.h */,
 			);
@@ -1785,6 +1796,7 @@
 				C59453491EC2F5510072AE41 /* DGActivityIndicatorDoubleBounceAnimation.m in Sources */,
 				C594535E1EC2F5510072AE41 /* DGActivityIndicatorRotatingSandglassAnimation.m in Sources */,
 				C594532B1EC2F5500072AE41 /* DGActivityIndicatorBallRotateAnimation.m in Sources */,
+				C5647D2C1ED1C5A200D49FA4 /* Common.m in Sources */,
 				C59453611EC2F5510072AE41 /* DGActivityIndicatorRotatingSquaresAnimation.m in Sources */,
 				C53003C41EC487060036A343 /* PEARUtility.m in Sources */,
 				C594533A1EC2F5500072AE41 /* DGActivityIndicatorBallSpinFadeLoader.m in Sources */,
@@ -1855,6 +1867,7 @@
 				C5F22AED1EC1EE98009C976D /* PhotoViewController.m in Sources */,
 				C55E60701EC864370063C5B4 /* InitialLoaderViewController.m in Sources */,
 				C59453411EC2F5500072AE41 /* DGActivityIndicatorBallZigZagAnimation.m in Sources */,
+				C5647D2D1ED1C5A200D49FA4 /* Common.m in Sources */,
 				C594534A1EC2F5510072AE41 /* DGActivityIndicatorDoubleBounceAnimation.m in Sources */,
 				C594544B1EC43F7E0072AE41 /* KNPercentLabel.m in Sources */,
 				C59453171EC2F5500072AE41 /* DGActivityIndicatorBallClipRotateAnimation.m in Sources */,
@@ -1922,6 +1935,7 @@
 				C5F22AEE1EC1EE98009C976D /* PhotoViewController.m in Sources */,
 				C55E60711EC864370063C5B4 /* InitialLoaderViewController.m in Sources */,
 				C59453421EC2F5500072AE41 /* DGActivityIndicatorBallZigZagAnimation.m in Sources */,
+				C5647D2E1ED1C5A200D49FA4 /* Common.m in Sources */,
 				C594534B1EC2F5510072AE41 /* DGActivityIndicatorDoubleBounceAnimation.m in Sources */,
 				C594544C1EC43F7E0072AE41 /* KNPercentLabel.m in Sources */,
 				C59453181EC2F5500072AE41 /* DGActivityIndicatorBallClipRotateAnimation.m in Sources */,
@@ -2062,12 +2076,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 5YQ4FY76PG;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = QSTK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = inside.QSTK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -2076,12 +2092,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 5YQ4FY76PG;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = QSTK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = inside.QSTK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

@@ -14,4 +14,6 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *roundNameLbl;
 
+@property (strong, nonatomic) IBOutlet UILabel *roundDetailsLbl;
+
 @end
